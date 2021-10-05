@@ -24,3 +24,8 @@ Auth::routes();
 Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
+
+
+Route::resource('barangs', App\Http\Controllers\BarangController::class);
+
+Route::resource('dokumenProposals', App\Http\Controllers\Dokumen_ProposalController::class);

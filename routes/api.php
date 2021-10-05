@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::resource('barangs', App\Http\Controllers\API\BarangAPIController::class);
+
+Route::resource('dokumen__proposals', App\Http\Controllers\API\Dokumen_ProposalAPIController::class);
