@@ -29,3 +29,7 @@ Route::get('/home', [
 Route::resource('barangs', App\Http\Controllers\BarangController::class);
 
 Route::resource('dokumenProposals', App\Http\Controllers\Dokumen_ProposalController::class);
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
