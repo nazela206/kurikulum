@@ -33,3 +33,5 @@ Route::resource('dokumenProposals', App\Http\Controllers\Dokumen_ProposalControl
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+Route::resource('suppliers', App\Http\Controllers\SupplierController::class);

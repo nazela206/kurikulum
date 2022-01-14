@@ -22,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('barangs', App\Http\Controllers\API\BarangAPIController::class);
 
 Route::resource('dokumen__proposals', App\Http\Controllers\API\Dokumen_ProposalAPIController::class);
+
+Route::resource('suppliers', App\Http\Controllers\API\SupplierAPIController::class);
